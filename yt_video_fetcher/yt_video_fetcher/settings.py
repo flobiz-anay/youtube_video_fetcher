@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -123,3 +124,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
+
+YOUTUBE_API_KEY ='AIzaSyC3qYNr_oXZnv8vXTK6D1fa1kkhAE_xzY4'
+SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search'
+VIDEO_URL = 'https://www.googleapis.com/youtube/v3/videos'
